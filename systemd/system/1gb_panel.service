@@ -1,0 +1,12 @@
+[Unit]
+Description=1GB Panel
+
+[Service]
+Type=forking
+ExecStart=/usr/local/1GbPanel/etc/init_d.sh start
+ExecStop=/usr/local/1GbPanel/etc/init_d.sh stop
+PidFile=/usr/local/1GbPanel/tmp/pids/lighttpd.pid
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
